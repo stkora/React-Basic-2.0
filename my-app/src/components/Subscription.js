@@ -2,6 +2,7 @@ import './Subscription.css'
 
 function Subscription () {
 
+    
     //dynamic data
 
     let date = new Date('2026','02','08');
