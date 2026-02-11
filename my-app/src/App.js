@@ -32,9 +32,9 @@ function App() {
     <div>
 
 
-    <Subscription date={subscriptions[0].date.toISOString()}  title={subscriptions[0].title}  amount={subscriptions[0].amount}/>
-    <Subscription date={subscriptions[1].date.toISOString()}  title={subscriptions[1].title}  amount={subscriptions[0].amount}/>
-    <Subscription date={subscriptions[2].date.toISOString()}  title={subscriptions[2].title}  amount={subscriptions[0].amount}/>
+    <Subscription date={subscriptions[0].date}  title={subscriptions[0].title}  amount={subscriptions[0].amount}/>
+    <Subscription date={subscriptions[1].date}  title={subscriptions[1].title}  amount={subscriptions[0].amount}/>
+    <Subscription date={subscriptions[2].date}  title={subscriptions[2].title}  amount={subscriptions[0].amount}/>
     </div>
   );
 }
