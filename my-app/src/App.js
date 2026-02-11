@@ -4,7 +4,7 @@ import Subscription from './components/Subscription';
 
 function App() {
 
-    let Subscriptions =[
+    let subscriptions =[
       {
       id: "1",
       date: new Date('2026','02','08'),
@@ -25,18 +25,16 @@ function App() {
      }
   ]
 
-    let date = new Date('2026','02','08');
-    let title = 'MonthlynSubscription'
-    let amount = '125.60'
+    
 
   return (
+
     <div>
 
-    //passing data
 
-    <Subscription passedDate={Subscription[0].date}  passedTitle={Subscription[0].title}  passedAmount={Subscription[0].amount}/>
-    <Subscription passedDate={Subscription[1].date}  passedTitle={Subscription[1].title}  passedAmount={Subscription[0].amount}/>
-    <Subscription passedDate={Subscription[2].date}  passedTitle={Subscription[2].title}  passedAmount={Subscription[0].amount}/>
+    <Subscription date={subscriptions[0].date.toISOString()}  title={subscriptions[0].title}  amount={subscriptions[0].amount}/>
+    <Subscription date={subscriptions[1].date.toISOString()}  title={subscriptions[1].title}  amount={subscriptions[0].amount}/>
+    <Subscription date={subscriptions[2].date.toISOString()}  title={subscriptions[2].title}  amount={subscriptions[0].amount}/>
     </div>
   );
 }

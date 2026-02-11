@@ -1,20 +1,16 @@
 import './Subscription.css'
 
-function Subscription () {
+function Subscription (props) {
 
     
-    //dynamic data
-
-    let date = new Date('2026','02','08');
-    let title = 'MonthlynSubscription'
-    let amount = '125.60'
+    //props concept
 
     return (
         <div className='subscription'>
 
-        <div>{date.toISOString()}</div>
-        <h2 className='subscription_title'>{title}</h2>
-        <div className='subscription_price'>{amount}</div>
+        <div>{props.date}</div>
+        <h2 className='subscription_title'>{props.title}</h2>
+        <div className='subscription_price'>{props.amount}</div>
 
         </div>
        
