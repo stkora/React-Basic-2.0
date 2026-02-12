@@ -21,7 +21,7 @@ function App() {
       id: "3",
       date: new Date('2024','06','23'),
       title: 'Quaterly Subscription',
-      amount: '280.60'
+      amount: '480.60'
      }
   ]
 
@@ -33,8 +33,8 @@ function App() {
 
 
     <Subscription date={subscriptions[0].date}  title={subscriptions[0].title}  amount={subscriptions[0].amount}/>
-    <Subscription date={subscriptions[1].date}  title={subscriptions[1].title}  amount={subscriptions[0].amount}/>
-    <Subscription date={subscriptions[2].date}  title={subscriptions[2].title}  amount={subscriptions[0].amount}/>
+    <Subscription date={subscriptions[1].date}  title={subscriptions[1].title}  amount={subscriptions[1].amount}/>
+    <Subscription date={subscriptions[2].date}  title={subscriptions[2].title}  amount={subscriptions[2].amount}/>
     </div>
   );
 }
