@@ -1,8 +1,8 @@
 import './Container.css'
 function Container(props) {
-    const classes ="container"
+    const classes ="container " + props.className
     return (
-        <div className='container'>{props.children}</div>
+        <div className={classes}>{props.children}</div>
     )
 }
 export default Container;
