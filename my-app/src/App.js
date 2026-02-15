@@ -1,9 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
 import Subscription from './components/Subscription';
-import Container from './components/Container';
-
-function App() {
+import Container from './templates/Container';
+// import React from 'react';
+ const App =()=> {
 
     let subscriptions =[
       {
@@ -30,6 +30,8 @@ function App() {
 
   return (
 
+
+    // React.createElement('div',{},React.createElement('h2',{},'Lets start!'))
     <Container>
 
 

@@ -1,6 +1,6 @@
 
 import './SubscriptionDate.css';
-function SubscriptionDate(props) {
+ const SubscriptionDate = (props) => {
 
     const month = props.date.toLocaleString('default',{month:'long'});
     const day = props.date.toLocaleString('default',{day:'2-digit'});
