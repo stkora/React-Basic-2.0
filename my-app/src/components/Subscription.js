@@ -10,6 +10,8 @@ import SubscriptionDate from './SubscriptionDate';
         <SubscriptionDate date={props.date}/>
         <h2 className='subscription_title'>{props.title}</h2>
         <div className='subscription_price'>{props.amount}</div>
+        <button type='button' onClick="">
+        Change Title</button>
 
         </Container>
        
