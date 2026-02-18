@@ -1,7 +1,13 @@
 import './FormSubscription.css'
 const FormSubscription =() => {
     const titleChangeHandler = (events) => {
-    console.log("onTitleChange",events,events.value,events.target);
+    console.log("onTitleChange",events,events.target.value);
+
+    }
+    const dateChangeHandler =(events) => {
+
+    }
+    const amountChangeHandler = (events) => {
 
     }
     return (
@@ -14,13 +20,13 @@ const FormSubscription =() => {
                 </div>
                 <div className="new_subscription_control">
                     <label>Date</label>
-                    <input type='date'></input>
+                    <input type='date' onChange={dateChangeHandler}></input>
 
                 </div>
                 <div className="new_subscription_control">
                     <label>Amount</label>
                     
-                    <input type='text' placeholder='Write Amount'></input>
+                    <input type='text' placeholder=' Amount' onChange={amountChangeHandler}></input>
 
                 </div>
 

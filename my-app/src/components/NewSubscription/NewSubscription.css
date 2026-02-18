@@ -21,8 +21,8 @@
 }
 .new_subscription button:hover,
 .new_subscription button:active {
-    background-color: #084a8e;
-    border-color: #084a8e;
+    background-color: #8eb1d3;
+    border-color: #8eb1d3;
 }
 
 .new_subscription button.alternative {
@@ -32,8 +32,8 @@
 }
 .new_subscription button.alternative.hover ,
 .new_subscription button.alternative.active {
-    background-color: #084a8e;
-    border-color: #084a8e;
+    background-color: #8eb1d3;
+    border-color: #8eb1d3;
 
 }
 
