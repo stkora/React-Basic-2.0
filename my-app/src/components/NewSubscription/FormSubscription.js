@@ -1,22 +1,44 @@
 import { useState } from 'react';
 import './FormSubscription.css'
 const FormSubscription =() => {
-    const [userTitle,setuserTitle] =useState("");
-    const [userDate,setuserDate] =useState("");
-    const [userAmount,setuserAmount] =useState("");
+    // const [userTitle,setuserTitle] =useState("");
+    // const [userDate,setuserDate] =useState("");
+    // const [userAmount,setuserAmount] =useState("");
+
+    const [form,setForm] = useState({userTitle:"",userDate:"", userAmount:"120"})
+
     const titleChangeHandler = (events) => {
-        setuserTitle(events.target.value)
-    console.log("onTitleChange",events,events.target.value);
+        //setuserTitle(events.target.value)
+    //console.log("onTitleChange",events,events.target.value);
+
+
+    setForm({...form,userTitle:events.target.value})
+        setForm((prevState)=> {
+         return {...prevState,userTitle:events.target.value}
+        })
+        console.log(form)
 
     }
     const dateChangeHandler =(events) => {
-        setuserDate(events.target.value)
-    console.log("onTitleChange",events,events.target.value);
+        //setuserDate(events.target.value)
+    //console.log("onTitleChange",events,events.target.value);
+
+    setForm({...form,userDate:events.target.value})
+        setForm((prevState)=> {
+         return {...prevState,userDate:events.target.value}
+        })
+        console.log(form)
 
     }
     const amountChangeHandler = (events) => {
-        setuserAmount(events.target.value)
-    console.log("onTitleChange",events,events.target.value);
+        //setuserAmount(events.target.value)
+    //console.log("onTitleChange",events,events.target.value);
+
+    setForm({...form,userAmount:events.target.value})
+        setForm((prevState)=> {
+         return {...prevState,userAmount:events.target.value}
+        })
+        console.log(form)
 
 
     }
