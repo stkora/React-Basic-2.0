@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import './FormSubscription.css'
-const FormSubscription =() => {
+const FormSubscription =(props) => {
     // const [userTitle,setuserTitle] =useState("");
     // const [userDate,setuserDate] =useState("");
     // const [userAmount,setuserAmount] =useState("");
 
-    const [form,setForm] = useState({userTitle:"",userDate:"", userAmount:"120"})
+    const [form,setForm] = useState({userTitle:"Title",userDate:"", userAmount:"Amount"})
 
     const titleChangeHandler = (events) => {
         //setuserTitle(events.target.value)
@@ -40,11 +40,11 @@ const FormSubscription =() => {
         })
         console.log(form)
 
-
     }
     const submitHandler = (events) => {
         events.preventDefault();
         const subscription = {title:form.userTitle,amount:form.userAmount,date:new Date(form.userDate)}
+        props.onSave(subscription)
         console.log("on submit",subscription)
 
     }
@@ -53,18 +53,18 @@ const FormSubscription =() => {
             <div className='new_subscription_controls'>
                 <div className="new_subscription_control">
                     <label>Title</label>
-                    <input type='text' placeholder='Title' onChange={titleChangeHandler}></input>
+                    <input type='text' placeholder='Title' value={form.userTitle} onChange={titleChangeHandler}></input>
 
                 </div>
                 <div className="new_subscription_control">
                     <label>Date</label>
-                    <input type='date' onChange={dateChangeHandler}></input>
+                    <input type='date' value={form.userDate} onChange={dateChangeHandler}></input>
 
                 </div>
                 <div className="new_subscription_control">
                     <label>Amount</label>
                     
-                    <input type='text' placeholder=' Amount' onChange={amountChangeHandler}></input>
+                    <input type='text' placeholder=' Amount' value={form.userAmount} onChange={amountChangeHandler}></input>
 
                 </div>
 
