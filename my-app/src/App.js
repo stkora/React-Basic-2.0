@@ -1,8 +1,10 @@
+import { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Subscription from './components/Subscription';
 import Container from './templates/Container';
 import NewSubscription from './components/NewSubscription/NewSubscription';
+import Filter from './components/Filter';
 // import React from 'react';
  const App =()=> {
 
@@ -26,17 +28,24 @@ import NewSubscription from './components/NewSubscription/NewSubscription';
       amount: '480.60'
      }
   ]
-
+   const [filterData,setFilterData] = useState();
    const addAddSubscriptionHandler =(data) =>{
     subscriptions.push(data)
     console.log("on add subscription",data)
    }
+   const filterChangeHandler =(data) => {
+    setFilterData(data);
+    console.log("filter change Handler",data)
+   }
+   
+  
 
   return (
 
 
     // React.createElement('div',{},React.createElement('h2',{},'Lets start!'))
     <Container>
+      <Filter onFilterChange={filterChangeHandler}/>
 
     <NewSubscription onAddSubscription = {addAddSubscriptionHandler}/>
     <Subscription date={subscriptions[0].date}  title={subscriptions[0].title}  amount={subscriptions[0].amount}/>

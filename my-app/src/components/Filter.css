@@ -1,0 +1,15 @@
+.filter {
+    color: white;
+    padding: 0 1rem;
+}
+.filter_control {
+    display: flex;
+    text-align: center;
+    width: 100%;
+    justify-content: center;
+    margin: 1rem 0;
+}
+.filter label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
