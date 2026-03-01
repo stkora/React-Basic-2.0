@@ -4,6 +4,7 @@ import Subscription from './components/Subscription';
 import Container from './templates/Container';
 import NewSubscription from './components/NewSubscription/NewSubscription';
 import Filter from './components/Filter';
+import SubscriptionList from './components/SubscriptionList';
 // import React from 'react';
 
 const INITIAL_SUBSCRIPTION = [
@@ -46,6 +47,14 @@ const INITIAL_SUBSCRIPTION = [
    const filteredSubscriptions = subscriptions.filter((item) => {
      return item.date.getFullYear().toString() === filteredYear
    })
+
+
+  //  let content = <h3>No Data Found!</h3>;
+  //  if(filteredSubscriptions.length!== 0) {
+  //  content =  filteredSubscriptions.map((subscription)=>
+  //   <Subscription key={subscription.id} date={subscription.date} 
+  //   title={subscription.title} amount={subscription.amount}/>)
+  //  }
   return (
   // React.createElement('div',{},React.createElement('h2',{},'Lets start!'))
     <Container>
@@ -53,11 +62,13 @@ const INITIAL_SUBSCRIPTION = [
     <NewSubscription onAddSubscription = {addSubscriptionHandler}  />
       
     <Filter onFilterChange={filterChangeHandler}   selectedFilter={filteredYear}/>
-    {filteredSubscriptions.length===0 && <h3>No Data Found!</h3>}
+    <SubscriptionList subscriptions={filteredSubscriptions}/>
+    
+    {/* {filteredSubscriptions.length===0 && <h3>No Data Found!</h3>}
     {filteredSubscriptions.length !== 0 &&
     filteredSubscriptions.map((subscription)=>
     <Subscription key={subscription.id} date={subscription.date} 
-    title={subscription.title} amount={subscription.amount}/>)}
+    title={subscription.title} amount={subscription.amount}/>)} */}
     
     
 

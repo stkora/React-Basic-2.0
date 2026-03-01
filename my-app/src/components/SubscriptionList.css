@@ -1,0 +1,9 @@
+.list {
+    list-style: none;
+    padding: 0;
+
+}
+.list_no_Data {
+    color: black;
+    text-align: center;
+}
