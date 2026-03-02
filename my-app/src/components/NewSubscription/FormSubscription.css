@@ -22,3 +22,10 @@
     
 
 }
+.danger {
+    background:  #902323 !important;
+}
+.save_button {
+    background: green !important;
+
+}
