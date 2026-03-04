@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import './App.css';
-import Subscription from './components/Subscription';
+//import Subscription from './components/Subscription';
 import Container from './templates/Container';
 import NewSubscription from './components/NewSubscription/NewSubscription';
 import Filter from './components/Filter';
 import SubscriptionList from './components/SubscriptionList';
+import SubscriptionChart from './components/SubscriptionChart';
 // import React from 'react';
 
 const INITIAL_SUBSCRIPTION = [
@@ -62,6 +63,7 @@ const INITIAL_SUBSCRIPTION = [
     <NewSubscription onAddSubscription = {addSubscriptionHandler}  />
       
     <Filter onFilterChange={filterChangeHandler}   selectedFilter={filteredYear}/>
+    <SubscriptionChart filteredSubscription= {filteredSubscriptions}/>
     <SubscriptionList subscriptions={filteredSubscriptions}/>
     
     {/* {filteredSubscriptions.length===0 && <h3>No Data Found!</h3>}

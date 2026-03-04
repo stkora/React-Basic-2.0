@@ -1,8 +1,8 @@
 import './Chartbar.css';
 const Chartbar = (props) => {
-    let barHeight= "0%"; 
+    let barHeight= "0%"
     if(props.maxValue>0) {
-        barHeight.match.round((props.value/props.maxValue)*100)+"%";
+        barHeight=Math.round((props.value/props.maxValue)*100)+"%";
     }
     return (
         <div className='chart-bar'>
@@ -15,7 +15,6 @@ const Chartbar = (props) => {
             <div className='chart-bar_label'>{props.label}</div>
         </div>
     )
-
 
 }
 export default Chartbar;
