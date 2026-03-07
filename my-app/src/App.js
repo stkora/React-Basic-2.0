@@ -30,7 +30,7 @@ const INITIAL_SUBSCRIPTION = [
   ]
  const App =()=> {
 
-   const [subscriptions,setSubscriptions] = useState(INITIAL_SUBSCRIPTION)
+   const [subscriptions,setSubscriptions] = useState(INITIAL_SUBSCRIPTION);
 
 
    const [filteredYear,setFilteredYear] = useState('2022');

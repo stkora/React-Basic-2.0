@@ -19,7 +19,6 @@
     border: 0px solid  white;
     width: 10rem;
     max-width: 100%;
-    
 
 }
 .danger {
@@ -28,4 +27,11 @@
 .save_button {
     background: green !important;
 
+}
+    /* Dynamic Style or classes */
+.new_subscription_control.invalid input{
+    border-color: red;
+}
+.new_subscription_control.invalid label {
+    color: red;
 }

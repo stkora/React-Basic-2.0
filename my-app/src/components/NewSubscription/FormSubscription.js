@@ -6,8 +6,14 @@ const FormSubscription =(props) => {
     // const [userAmount,setuserAmount] =useState("");
 
     const [form,setForm] = useState({userTitle:"Title",userDate:"", userAmount:"Amount"})
+    
+    const[isValid,setIsValid]=useState(true);
 
     const titleChangeHandler = (events) => {
+        if(events.target.value.trim().length>0) {
+            setIsValid(true);
+        }
+       
         //setuserTitle(events.target.value)
     //console.log("onTitleChange",events,events.target.value);
 
@@ -43,6 +49,10 @@ const FormSubscription =(props) => {
     }
     const submitHandler = (events) => {
         events.preventDefault();
+         if(form.userTitle.trim().length===0){
+            setIsValid(false);
+            return
+        }
         const subscription = {title:form.userTitle,amount:form.userAmount,date:new Date(form.userDate)}
         props.onSave(subscription);
         console.log("on submit",subscription)
@@ -51,9 +61,12 @@ const FormSubscription =(props) => {
     return (
         <form onSubmit={submitHandler}>
             <div className='new_subscription_controls'>
-                <div className="new_subscription_control">
-                    <label>Title</label>
-                    <input type='text' placeholder='Title' value={form.userTitle} onChange={titleChangeHandler}></input>
+                <div
+                className={`new_subscription_control ${!isValid?'invalid':''} `}>
+                    {/* style={{color:!isValid?'red':'black'}}
+                    style={{borderColor:!isValid?'red':'black'}} */}
+                    <label >Title</label>
+                    <input  type='text' placeholder='Title' value={form.userTitle} onChange={titleChangeHandler}></input>
 
                 </div>
                 <div className="new_subscription_control">
