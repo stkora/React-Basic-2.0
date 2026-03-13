@@ -27,7 +27,7 @@
 
 .new_subscription button.alternative {
     color: #084a8e;
-    background-color: transparent;
+    background-color: transparent;  
     background-color: transparent;
 }
 .new_subscription button.alternative.hover ,
@@ -35,5 +35,16 @@
     background-color: #8eb1d3;
     border-color: #8eb1d3;
 
+}
+.responsive {
+    width: 100%;
+    margin-top: 15px;
+
+}
+@media(min-width :1366px) {
+    .responsive{
+        width: 20%;
+        margin-top: 0px;
+    }
 }
 
